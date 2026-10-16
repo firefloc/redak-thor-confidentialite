@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Politique de confidentialité de l’extension Rédak’Thor : données locales, moteurs IA, conservation et suppression.">
+<title>Confidentialité — Rédak'Thor</title>
+<style>
+  :root { font-family: system-ui, sans-serif; color-scheme: light dark; line-height: 1.65; }
+  body { max-width: 760px; margin: auto; padding: 40px 24px; }
+  h1, h2 { line-height: 1.25; }
+  h2 { margin-top: 2em; font-size: 1.3rem; }
+  a { color: light-dark(#9b2028, #ff9aa1); }
+  header { border-bottom: 1px solid #8886; padding-bottom: 20px; }
+  footer { margin-top: 40px; border-top: 1px solid #8886; padding-top: 20px; }
+</style>
+<body>
+<header>
+  <h1>Rédak'Thor — confidentialité</h1>
+  <p>Dernière mise à jour : <time datetime="2026-10-16">16 octobre 2026</time>.<br>
+  Éditeur : <a href="https://github.com/firefloc">firefloc</a>.</p>
+</header>
+<main>
+<h2>À quoi sert l’extension ?</h2>
+<p>Rédak'Thor aide à corriger, reformuler, traduire et rédiger du texte dans les champs de saisie du navigateur, notamment dans Gmail et Salesforce. Vous choisissez le moteur d’intelligence artificielle et vérifiez le résultat avant de l’utiliser. Aucun compte Rédak'Thor n’est nécessaire.</p>
+
+<h2>Quelles données sont traitées ?</h2>
+<p>Selon votre action et vos réglages, l’extension traite le texte à modifier, votre consigne, le contexte du champ, des messages du fil ou des informations de la fiche affichée. Ces contenus peuvent inclure des noms, coordonnées, communications personnelles et informations professionnelles. Le profil auteur, l’adresse e-mail renseignée, le ton et les préférences mémorisées peuvent compléter une demande.</p>
+<p>Les accès aux pages servent à intégrer les commandes aux champs et à récupérer le contexte utile. L’extension ne constitue pas d’historique de navigation et n’intègre ni publicité ni outil de mesure d’audience.</p>
+
+<h2>Que reste-t-il sur votre appareil ?</h2>
+<p>Les réglages, le profil, les clés API que vous renseignez, les préférences de rédaction et la liste des sites désactivés sont conservés dans le stockage local de l’extension dans votre profil de navigateur. Ils ne sont pas envoyés à un serveur de l’éditeur.</p>
+<p>La mémoire peut aussi conserver des extraits des versions proposées et retouchées, des fils soumis à l’apprentissage, ainsi qu’un journal des opérations. Elle est limitée à 120 notes, 60 sources de 4 000 caractères maximum chacune et 400 entrées de journal. Ces limites ne constituent pas une durée d’expiration : les éléments restent jusqu’à leur suppression ou leur remplacement par des éléments plus récents.</p>
+<p>Si vous activez la synchronisation de la mémoire vers un dossier de votre choix, des fichiers sont également écrits dans ce dossier. Ils suivent ensuite les règles de sauvegarde ou de synchronisation de votre appareil.</p>
+
+<h2>À qui les demandes sont-elles transmises ?</h2>
+<p>Les données nécessaires à la demande vont au moteur que vous avez sélectionné, sans serveur de rédaction intermédiaire exploité par l’éditeur :</p>
+<ul>
+  <li><strong>ChatGPT Web :</strong> la demande est saisie et envoyée dans ChatGPT avec votre session existante. La conversation et la réponse peuvent rester dans votre historique ChatGPT selon vos réglages.</li>
+  <li><strong>API OpenAI ou Anthropic :</strong> la demande et la clé API correspondante sont envoyées au fournisseur choisi par HTTPS pour l’authentification et la génération de la réponse.</li>
+  <li><strong>Codex ou Claude Code :</strong> un pont natif installé séparément transmet la demande au CLI sur votre appareil. Le CLI contacte les services configurés avec votre authentification. « Local » désigne ici le CLI et le pont ; cela ne signifie pas que le modèle fonctionne hors ligne.</li>
+</ul>
+<p>Lorsque l’apprentissage après retouche est activé, les versions proposée et retenue peuvent être envoyées au moteur choisi pour en extraire des préférences. Une analyse de fil demandée par l’utilisateur transmet les extraits concernés. Si la détection locale d’une signature ou d’une citation reste incertaine, une analyse IA peut également transmettre le texte du champ pour trouver la frontière à préserver.</p>
+<p>Les fournisseurs appliquent leurs propres conditions de traitement, de conservation, d’utilisation des contenus et de transfert international, selon le service et les réglages du compte. Consultez les politiques d’<a href="https://openai.com/policies/privacy-policy/">OpenAI</a> et d’<a href="https://www.anthropic.com/legal/privacy">Anthropic</a>. L’éditeur ne peut pas supprimer à leur place les données déjà reçues par ces services.</p>
+
+<h2>Usage limité des données</h2>
+<p>L’extension utilise les données pour fournir et personnaliser l’assistance à la rédaction. L’éditeur ne vend pas les données, ne les utilise pas pour la publicité, la solvabilité ou le prêt, et ne les transmet pas pour une finalité étrangère à cette fonction. Aucun service de collecte de textes ou d’analytique de l’éditeur n’est intégré à l’extension.</p>
+
+<h2>Vos choix et la suppression</h2>
+<ul>
+  <li>Dans les options, vous pouvez modifier le profil, retirer les clés API, désactiver la lecture du contexte, l’utilisation de la mémoire ou l’apprentissage après retouche, ainsi que désactiver l’extension sur certains sites.</li>
+  <li>Vous pouvez consulter, modifier, exporter ou supprimer les notes mémorisées. Le bouton d’effacement des préférences efface les notes ; il ne supprime pas les sources ni le journal.</li>
+  <li>Pour supprimer l’ensemble des données locales, désinstallez l’extension ou effacez son stockage dans le navigateur. Désactiver une fonction ne supprime pas les données déjà enregistrées.</li>
+  <li>Supprimez séparément les fichiers du dossier de mémoire et leurs éventuelles sauvegardes, ainsi que les conversations et données conservées par les fournisseurs IA. Les identifiants des CLI se gèrent séparément dans ces outils.</li>
+</ul>
+
+<h2>Cette page et les demandes d’assistance</h2>
+<p>Cette page statique est hébergée par GitHub Pages. Elle ne contient ni formulaire, ni script de suivi, ni ressource externe chargée automatiquement. GitHub peut traiter les données techniques nécessaires à l’hébergement, notamment l’adresse IP, conformément à sa <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">politique de confidentialité</a>.</p>
+<p>Pour une question sur cette politique ou l’exercice de vos droits, contactez l’éditeur via les <a href="https://github.com/firefloc/redak-thor-confidentialite/issues">demandes d’assistance GitHub</a>. Ces échanges sont publics : ne joignez jamais de texte confidentiel, de données personnelles de tiers ou de clé API. L’éditeur ne dispose pas d’un accès distant au stockage local de votre extension.</p>
+</main>
+<footer><p>Cette politique sera mise à jour si les fonctionnalités ou les traitements décrits changent. Rédak'Thor est indépendant de Google, Salesforce, OpenAI et Anthropic.</p></footer>
+</body>
+</html>
